@@ -27,7 +27,7 @@
         width: 95%; /* Allows modal to take more screen space on small devices */
         padding: 10px; /* Adjusts padding to be less on smaller screens */
     }
-    
+
     .modal-body p, .modal-body img {
         float: none; /* Avoids floating elements on small screens */
         display: block; /* Makes elements stack vertically */
@@ -36,7 +36,7 @@
         width: auto; /* Adjusts width of images to auto for better scaling */
         max-width: 100%; /* Ensures images don't overflow the modal */
     }
-    
+
     .modal-body img {
         margin: 10px auto; /* Adds some space above and below the image and centers it */
     }
