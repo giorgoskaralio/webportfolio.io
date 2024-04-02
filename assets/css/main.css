@@ -12,33 +12,57 @@
         margin: 0;
         padding: 0;
     }
-
-
-/* Base styles for content */
-.content {
-    width: 90%;
+.modal-content {
+    background-color: #fefefe;
     margin: auto;
-    max-width: 1200px; /* Adjust this value based on your design */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Adjust width for desktop screens */
+    max-width: 600px; /* Ensures modal isn't too wide on large screens */
 }
 
-/* Smaller screens (e.g., smartphones) */
-@media (max-width: 600px) {
-    .content {
-        width: 95%;
+/* This style will only apply to screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 95%; /* Allows modal to take more screen space on small devices */
+        padding: 10px; /* Adjusts padding to be less on smaller screens */
+    }
+    
+    .modal-body p, .modal-body img {
+        float: none; /* Avoids floating elements on small screens */
+        display: block; /* Makes elements stack vertically */
+        text-align: center; /* Centers the content */
+        margin-left: 0; /* Resets margin */
+        width: auto; /* Adjusts width of images to auto for better scaling */
+        max-width: 100%; /* Ensures images don't overflow the modal */
+    }
+    
+    .modal-body img {
+        margin: 10px auto; /* Adds some space above and below the image and centers it */
     }
 }
 
-/* Medium-sized screens (e.g., tablets) */
-@media (min-width: 601px) and (max-width: 1024px) {
-    .content {
-        width: 90%;
-    }
+/* Additional styling for the 'Continue to Website' button for better touch interaction */
+.button {
+    padding: 10px 20px; /* Larger padding for easier tapping on touch devices */
+    font-size: 16px; /* Larger font size for better readability */
+    display: inline-block; /* Ensures button doesn't take full width */
+    margin: 10px 0; /* Adds space above and below the button */
 }
 
-/* Larger screens */
-@media (min-width: 1025px) {
-    .content {
-        width: 85%;
+/* Ensuring the modal is centered vertically */
+.modal {
+    display: flex;
+    align-items: center; /* This will vertically center the modal */
+    justify-content: center; /* This will horizontally center the modal */
+    height: 100%; /* Takes full height of the viewport */
+}
+
+/* Adjusts the modal for smaller screens */
+@media screen and (max-width: 600px) {
+    .modal {
+        align-items: flex-start; /* Aligns modal to the top on smaller screens */
+        padding-top: 50px; /* Adds some space on the top */
     }
 }
 
