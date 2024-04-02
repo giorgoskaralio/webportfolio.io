@@ -21,26 +21,47 @@
     max-width: 600px; /* Ensures modal isn't too wide on large screens */
 }
 
-/* This style will only apply to screens smaller than 600px */
-@media screen and (max-width: 600px) {
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px; /* Location of the box */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px; /* Maximum width for the modal */
+}
+
+/* Ensure the modal-body text and any images are responsive */
+.modal-body p,
+.modal-body img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adjust the modal layout for smaller screens */
+@media screen and (max-width: 768px) {
     .modal-content {
-        width: 95%; /* Allows modal to take more screen space on small devices */
-        padding: 10px; /* Adjusts padding to be less on smaller screens */
+        width: 90%; /* Increase width on smaller screens for better visibility */
+        margin: 10% auto; /* Adjust margin to ensure visibility on small screens */
     }
-
-    .modal-body p, .modal-body img {
-        float: none; /* Avoids floating elements on small screens */
-        display: block; /* Makes elements stack vertically */
-        text-align: center; /* Centers the content */
-        margin-left: 0; /* Resets margin */
-        width: auto; /* Adjusts width of images to auto for better scaling */
-        max-width: 100%; /* Ensures images don't overflow the modal */
-    }
-
     .modal-body img {
-        margin: 10px auto; /* Adds some space above and below the image and centers it */
+        max-width: 100px; /* Adjust image size in modal for smaller screens */
     }
 }
+
 
 /* Additional styling for the 'Continue to Website' button for better touch interaction */
 .button {
