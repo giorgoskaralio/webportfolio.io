@@ -2537,21 +2537,26 @@ input, select, textarea {
 				width: 100%;
 			}
 
-			.resume-photo {
-    display: inline-block;
+			/* Style for the resume photo link for better control */
+.resume-photo-link {
+    display: inline-block; /* Keep the link inline-block for better control */
     border: 2px solid #000;
     border-radius: 5px;
     padding: 5px;
-    width: 100%; /* Makes the image responsive */
-    max-width: 400px; /* Maximum width */
-    height: auto; /* Maintain aspect ratio */
+    text-align: center; /* Center align the content */
 }
 
-@media (max-width: 600px) {
-    .resume-photo {
-        width: 80%; /* Reduces the size on smaller screens */
-        margin: 0 auto; /* Centers the image */
-        display: block; /* Changes display to block for better control */
+.resume-photo-link img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 400px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Center the image for all screen sizes */
+}
+
+/* Adjustments for screens smaller than a specific breakpoint */
+@media (max-width: 768px) {
+    .resume-photo-link img {
+        max-width: 250px; /* Smaller max-width for smaller screens */
     }
 }
 
